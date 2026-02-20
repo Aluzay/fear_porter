@@ -39,7 +39,7 @@ func (p *porter) chestFix() {
 }
 
 func (p *porter) grassSide() error {
-	if dirt, err := p.out.Read("textures/blocks/dirt.png"); err == nil {
+	if dirt, err := p.out.Read("textures/blocks/grass_side.png"); err == nil {
 		if grassSideOverlay, err := p.out.Read("textures/blocks/grass_side_overlay.png"); err == nil {
 			grassSideTGA, err := internal.SideOverlayTGA(grassSideOverlay, dirt)
 			if err != nil {

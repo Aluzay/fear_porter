@@ -26,17 +26,17 @@ func (t *Tint) RecolorImage(in image.Image, fileName string) (image.Image, error
 		for x := bounds.Min.X; x < bounds.Max.X; x++ {
 			pixelColor := in.At(x, y)
 			r, g, b, a := pixelColor.RGBA()
-			if a < 1024 {
+			a >>= 8
+			// Skip fully transparent pixels
+			if a == 0 {
 				continue
 			}
 			r >>= 8
 			g >>= 8
 			b >>= 8
-			a >>= 8
-			r = (r + uint32(t.color.R)) / 2
-			g = (g + uint32(t.color.G)) / 2
-			b = (b + uint32(t.color.B)) / 2
-
+			r = r * uint32(t.color.R) / 255 // Actual red
+			g = g * uint32(t.color.G) / 255 // Actual green
+			b = b * uint32(t.color.B) / 255 // Actual blue
 			dst.SetRGBA(x, y, color.RGBA{uint8(r), uint8(g), uint8(b), uint8(a)})
 		}
 	}

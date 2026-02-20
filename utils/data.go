@@ -4,7 +4,36 @@ import (
 	"image/color"
 )
 
-var POTS_MAP = map[string]color.RGBA{"blindness": {64, 64, 64, 255}, "damageBoost": {139, 0, 0, 255}, "fireResistance": {255, 200, 0, 255}, "harm": {139, 0, 0, 255}, "heal": {255, 0, 0, 255}, "invisibility": {204, 204, 204, 255}, "jump": {0, 255, 0, 255}, "luck": {0, 255, 0, 255}, "moveSlowdown": {192, 192, 192, 255}, "moveSpeed": {0, 255, 255, 255}, "nightVision": {0, 0, 255, 255}, "poison": {0, 255, 0, 255}, "regeneration": {255, 175, 175, 255}, "slowFall": {192, 192, 192, 255}, "turtleMaster": {192, 192, 192, 255}, "waterBreathing": {192, 192, 192, 255}, "weakness": {0, 0, 0, 255}, "haste": {255, 255, 0, 255}, "wither": {61, 43, 31, 255}}
+var POTS_MAP = map[string]color.RGBA{
+	"absorption":     {36, 81, 162, 255},
+	"blindness":      {13, 31, 34, 255},
+	"confusion":      {84, 29, 73, 255},
+	"damageBoost":    {145, 35, 34, 255},
+	"digSlowdown":    {73, 65, 23, 255},
+	"digSpeed":       {214, 189, 66, 255},
+	"drinkable":      {55, 92, 195, 255},
+	"fireResistance": {224, 152, 57, 255},
+	"harm":           {66, 10, 9, 255},
+	"heal":           {244, 35, 34, 255},
+	"healthBoost":    {244, 123, 34, 255},
+	"hunger":         {87, 116, 82, 255},
+	"invisibility":   {125, 129, 144, 255},
+	"jump":           {33, 251, 75, 255},
+	"moveSlowdown":   {89, 106, 127, 255},
+	"moveSpeed":      {122, 172, 195, 255},
+	"nightVision":    {31, 31, 158, 255},
+	"poison":         {77, 145, 48, 255},
+	"regeneration":   {202, 91, 168, 255},
+	"resistance":     {151, 68, 57, 255},
+	"saturation":     {244, 35, 34, 255},
+	"waterBreathing": {45, 81, 151, 255},
+	"weakness":       {71, 76, 71, 255},
+	"wither":         {51, 40, 37, 255},
+	"luck":           {0, 255, 0, 255},
+	"slowFall":       {192, 192, 192, 255},
+	"turtleMaster":   {125, 129, 144, 255},
+	"haste":          {214, 189, 66, 255},
+}
 
 var ARMOR_MAP = map[string]string{"diamond_layer_1": "diamond_1", "diamond_layer_2": "diamond_2", "chainmail_layer_1": "chain_1", "chainmail_layer_2": "chain_2", "gold_layer_1": "gold_1", "gold_layer_2": "gold_2", "iron_layer_1": "iron_1", "iron_layer_2": "iron_2", "leather_layer_1": "cloth_1", "leather_layer_2": "cloth_2"}
 

@@ -57,8 +57,8 @@ func (p *porter) tintPots(splash bool) error {
 	for potType, color := range utils.POTS_MAP {
 		over, _ := recolor.NewTint(color).RecolorImage(overlay, "")
 		canvas := image.NewRGBA(blank.Bounds())
-		draw.Draw(canvas, blank.Bounds(), blank, image.Point{0, 0}, draw.Src)
-		draw.Draw(canvas, blank.Bounds(), over, image.Point{0, 0}, draw.Over)
+		draw.Draw(canvas, blank.Bounds(), over, image.Point{0, 0}, draw.Src)   // Overlay the recolored potion overlay
+		draw.Draw(canvas, blank.Bounds(), blank, image.Point{0, 0}, draw.Over) // Draw the blank potion bottle on top
 		writer := bytes.NewBuffer([]byte{})
 		if err := fastpng.Encode(writer, canvas); err != nil {
 			return porterror.Wrap(err)
